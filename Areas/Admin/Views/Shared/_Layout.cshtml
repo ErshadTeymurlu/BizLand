@@ -42,9 +42,16 @@
 
             <!-- Nav Item - Portfolio -->
             <li class="nav-item active">
-                <a class="nav-link" asp-area="admin" asp-controller="portfolio" asp-action="items">
+                <a class="nav-link" asp-area="admin" asp-controller="portfolioitems" asp-action="index">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Portfolio</span>
+                </a>
+            </li>
+            <!-- Nav Item - Category -->
+            <li class="nav-item active">
+                <a class="nav-link" asp-area="admin" asp-controller="portfoliocategories" asp-action="index">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Categories</span>
                 </a>
             </li>
 
@@ -364,6 +371,7 @@
                 <!-- End of Topbar -->
 
                 @RenderBody()
+                @RenderSection("Scripts",false)
 
                 <!-- Footer -->
                 <footer class="sticky-footer bg-white">
@@ -421,6 +429,7 @@
         <!-- Page level custom scripts -->
         <script src="~/admin/js/demo/chart-area-demo.js"></script>
         <script src="~/admin/js/demo/chart-pie-demo.js"></script>
+
 
 </body>
 
